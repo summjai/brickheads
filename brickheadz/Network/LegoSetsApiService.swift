@@ -8,7 +8,11 @@
 
 import Foundation
 
-final class LegoSetsApiService {
+protocol LegoSetsApiServiceProtocol {
+    func fetchSets(completion: @escaping (Result<[LegoSet], Error>) -> Void)
+}
+
+final class LegoSetsApiService: LegoSetsApiServiceProtocol {
 
     // MARK: - Private Properties
 
@@ -21,17 +25,17 @@ final class LegoSetsApiService {
 
     func fetchSets(completion: @escaping (Result<[LegoSet], Error>) -> Void) {
         var request = URLRequest(
-            url: URL(string: "https://rebrickable.com//api/v3/lego/sets")!
+            url: URL(string: "https://rebrickable.com/api/v3/lego/sets/")!
         )
-        request.allHTTPHeaderFields = [
-            "Authorization": "key \(key)"
-        ]
+        request.setValue("key \(key)", forHTTPHeaderField: "Authorization")
         networkClient.fetchRequest(request) { (result: Result<LegoSetApiContainer, Error>) in
-            switch result {
-            case .success(let container):
-                completion(.success(container.results))
-            case .failure(let error):
-                completion(.failure(error))
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let container):
+                    completion(.success(container.results))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
             }
         }
     }

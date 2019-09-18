@@ -22,5 +22,5 @@ struct LegoSet: Decodable {
     let name: String
     let year: Int
     let pieces: Int
-    let imageUrl: URL
+    let imageUrl: URL?
 }
