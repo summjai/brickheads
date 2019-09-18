@@ -32,4 +32,20 @@ final class NetworkClient {
             }
             }.resume()
     }
+
+    func fetchImage(
+        _ request: URLRequest,
+        completion: @escaping (Data?) -> Void
+    ) {
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                completion(nil)
+                return
+            }
+
+            if let data = data {
+                completion(data)
+            }
+        }.resume()
+    }
 }

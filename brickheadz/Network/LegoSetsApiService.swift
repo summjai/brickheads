@@ -6,10 +6,11 @@
 //  Copyright © 2019 Anastasia Gachkovskaya. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol LegoSetsApiServiceProtocol {
     func fetchSets(completion: @escaping (Result<[LegoSet], Error>) -> Void)
+    func fetchImage(url: URL, completion: @escaping (UIImage?) -> Void)
 }
 
 final class LegoSetsApiService: LegoSetsApiServiceProtocol {
@@ -36,6 +37,17 @@ final class LegoSetsApiService: LegoSetsApiServiceProtocol {
                 case .failure(let error):
                     completion(.failure(error))
                 }
+            }
+        }
+    }
+
+    func fetchImage(url: URL, completion: @escaping (UIImage?) -> Void) {
+        let request = URLRequest(url: url)
+        networkClient.fetchImage(request) { data in
+            DispatchQueue.main.async {
+                guard let data = data,
+                let image = UIImage(data: data) else { return completion(nil) }
+                completion(image)
             }
         }
     }

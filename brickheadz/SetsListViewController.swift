@@ -61,6 +61,18 @@ extension SetsListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = model.name
         return cell
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let set = viewModel.modelForRow(indexPath.row)
+        let detailsController = SetDetailsViewController.instantiate(
+            set: set
+        )
+        navigationController?.pushViewController(
+            detailsController,
+            animated: true
+        )
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 extension SetsListViewController: SetsListViewModelDelegate {
