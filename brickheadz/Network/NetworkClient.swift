@@ -38,7 +38,7 @@ final class NetworkClient {
         completion: @escaping (Data?) -> Void
     ) {
         URLSession.shared.dataTask(with: request) { data, response, error in
-            if let error = error {
+            if error != nil {
                 completion(nil)
                 return
             }

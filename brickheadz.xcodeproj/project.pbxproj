@@ -12,7 +12,7 @@
 		34857D70233282F800547F85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34857D6E233282F800547F85 /* Main.storyboard */; };
 		34857D72233282FB00547F85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34857D71233282FB00547F85 /* Assets.xcassets */; };
 		34857D75233282FB00547F85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34857D73233282FB00547F85 /* LaunchScreen.storyboard */; };
-		34857D80233282FB00547F85 /* brickheadzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34857D7F233282FB00547F85 /* brickheadzTests.swift */; };
+		34857D80233282FB00547F85 /* SetsDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34857D7F233282FB00547F85 /* SetsDetailsViewModelTests.swift */; };
 		34857D8D233288C300547F85 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34857D8C233288C300547F85 /* NetworkClient.swift */; };
 		34857D902332903E00547F85 /* LegoSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34857D8F2332903E00547F85 /* LegoSet.swift */; };
 		34857D922332927300547F85 /* LegoSetApiContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34857D912332927300547F85 /* LegoSetApiContainer.swift */; };
@@ -20,6 +20,9 @@
 		34857D97233296F200547F85 /* SetsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34857D96233296F200547F85 /* SetsListViewModel.swift */; };
 		34857D9923329E9B00547F85 /* SetDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34857D9823329E9B00547F85 /* SetDetailsViewController.swift */; };
 		34857D9B23329EC300547F85 /* SetDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34857D9A23329EC300547F85 /* SetDetailsViewModel.swift */; };
+		34878B242333FBE50056AD11 /* SetsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34878B232333FBE50056AD11 /* SetsListViewModelTests.swift */; };
+		34878B262333FC210056AD11 /* LegoSetsApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34878B252333FC210056AD11 /* LegoSetsApiMock.swift */; };
+		34878B28233401290056AD11 /* LegoSetSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34878B27233401290056AD11 /* LegoSetSample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +44,7 @@
 		34857D74233282FB00547F85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34857D76233282FB00547F85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34857D7B233282FB00547F85 /* brickheadzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = brickheadzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		34857D7F233282FB00547F85 /* brickheadzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = brickheadzTests.swift; sourceTree = "<group>"; };
+		34857D7F233282FB00547F85 /* SetsDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		34857D81233282FB00547F85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34857D8C233288C300547F85 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		34857D8F2332903E00547F85 /* LegoSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoSet.swift; sourceTree = "<group>"; };
@@ -50,6 +53,9 @@
 		34857D96233296F200547F85 /* SetsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsListViewModel.swift; sourceTree = "<group>"; };
 		34857D9823329E9B00547F85 /* SetDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDetailsViewController.swift; sourceTree = "<group>"; };
 		34857D9A23329EC300547F85 /* SetDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDetailsViewModel.swift; sourceTree = "<group>"; };
+		34878B232333FBE50056AD11 /* SetsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsListViewModelTests.swift; sourceTree = "<group>"; };
+		34878B252333FC210056AD11 /* LegoSetsApiMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoSetsApiMock.swift; sourceTree = "<group>"; };
+		34878B27233401290056AD11 /* LegoSetSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoSetSample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +115,10 @@
 		34857D7E233282FB00547F85 /* brickheadzTests */ = {
 			isa = PBXGroup;
 			children = (
-				34857D7F233282FB00547F85 /* brickheadzTests.swift */,
+				34878B232333FBE50056AD11 /* SetsListViewModelTests.swift */,
+				34857D7F233282FB00547F85 /* SetsDetailsViewModelTests.swift */,
+				34878B252333FC210056AD11 /* LegoSetsApiMock.swift */,
+				34878B27233401290056AD11 /* LegoSetSample.swift */,
 				34857D81233282FB00547F85 /* Info.plist */,
 			);
 			path = brickheadzTests;
@@ -250,7 +259,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34857D80233282FB00547F85 /* brickheadzTests.swift in Sources */,
+				34878B262333FC210056AD11 /* LegoSetsApiMock.swift in Sources */,
+				34857D80233282FB00547F85 /* SetsDetailsViewModelTests.swift in Sources */,
+				34878B242333FBE50056AD11 /* SetsListViewModelTests.swift in Sources */,
+				34878B28233401290056AD11 /* LegoSetSample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
